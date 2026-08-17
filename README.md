@@ -1,6 +1,6 @@
 # Azure Data Factory CI/CD Data Engineering
 
-End-to-end Azure Data Factory data pipelines with Azure DevOps CI/CD using ARM templates and multi-environment deployment.
+End-to-end Azure Data Factory data pipelines with Azure DevOps CI/CD using ARM templates and multi-environment deployment
 
 ## Project Overview
 
