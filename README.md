@@ -152,3 +152,19 @@ azure-adf-cicd-data-engineering
 ├── package.json
 │
 └── README.md
+
+```markdown
+## Screenshots
+
+### Azure Data Factory Pipeline
+
+![ADF Pipeline]("C:\Users\noors\OneDrive\Desktop\Azure-ADF-CICD-Project\screenshot\adf pipeline.png")
+
+### Azure DevOps CI/CD Pipeline
+
+![Azure DevOps CI/CD]("C:\Users\noors\OneDrive\Desktop\Azure-ADF-CICD-Project\screenshot\Azure_devop_pipeline.png")
+
+
+### Successful Production Deployment
+
+![Successful Production Deployment](C:\Users\noors\OneDrive\Desktop\Azure-ADF-CICD-Project\screenshot\successful_prod.png)
