@@ -157,6 +157,7 @@ azure-adf-cicd-data-engineering
 ## Screenshots
 
 ### Azure Data Factory Pipeline
+![Image Alt](https://github.com/Shaheer2208/azure-adf-cicd-data-engineering/blob/b30ebc6c96d71cd750e6010e39716af51018cf7e/Azure-ADF-CICD-Project/screenshot/adf%20pipeline.png)
 
 
 ### Azure DevOps CI/CD Pipeline
