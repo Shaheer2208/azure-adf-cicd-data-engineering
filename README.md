@@ -153,20 +153,28 @@ azure-adf-cicd-data-engineering
 │
 └── README.md
 
-```markdown
-## Screenshots
+## Key Learnings
 
-### Azure Data Factory Pipeline
-![Image Alt](https://github.com/Shaheer2208/azure-adf-cicd-data-engineering/blob/b30ebc6c96d71cd750e6010e39716af51018cf7e/Azure-ADF-CICD-Project/screenshot/adf%20pipeline.png)
+Hands-on experience with Azure Data Factory pipeline development
 
+Understanding of Azure DevOps YAML pipelines
 
-### Azure DevOps CI/CD Pipeline
+ARM template generation and deployment
 
-![Azure DevOps CI/CD](<img width="1575" height="805" alt="Azure_devop_pipeline" src="https://github.com/user-attachments/assets/987051d0-99af-48c1-b961-496a0e9040f1" />
-)
+Pipeline artifact creation and consumption
 
+Environment-specific parameterization
 
-### Successful Production Deployment
+Deployment across Development QA and Production environments
 
-![Successful Production Deployment](<img width="1919" height="823" alt="successful_prod" src="https://github.com/user-attachments/assets/41165cf6-7ce0-42cb-86ba-62ed98b56acb" />
-)
+Azure PowerShell automation
+
+CI/CD implementation for Azure Data Factory
+
+## Project Outcome
+
+Successfully implemented an end-to-end Azure Data Factory CI/CD pipeline using Azure DevOps.
+
+The solution automatically builds and validates the ADF ARM template, publishes the template as an artifact, and deploys the ADF resources across Development QA and Production environments.
+
+The deployment workflow was successfully executed through Azure DevOps with all stages completed successfully.
