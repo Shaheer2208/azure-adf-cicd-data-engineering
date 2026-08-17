@@ -158,13 +158,16 @@ azure-adf-cicd-data-engineering
 
 ### Azure Data Factory Pipeline
 
-![ADF Pipeline]("C:\Users\noors\OneDrive\Desktop\Azure-ADF-CICD-Project\screenshot\adf pipeline.png")
+![ADF Pipeline](<img width="1220" height="321" alt="adf pipeline" src="https://github.com/user-attachments/assets/63536589-21bd-455d-a912-4673161a4b12" />
+)
 
 ### Azure DevOps CI/CD Pipeline
 
-![Azure DevOps CI/CD]("C:\Users\noors\OneDrive\Desktop\Azure-ADF-CICD-Project\screenshot\Azure_devop_pipeline.png")
+![Azure DevOps CI/CD](<img width="1575" height="805" alt="Azure_devop_pipeline" src="https://github.com/user-attachments/assets/987051d0-99af-48c1-b961-496a0e9040f1" />
+)
 
 
 ### Successful Production Deployment
 
-![Successful Production Deployment](C:\Users\noors\OneDrive\Desktop\Azure-ADF-CICD-Project\screenshot\successful_prod.png)
+![Successful Production Deployment](<img width="1919" height="823" alt="successful_prod" src="https://github.com/user-attachments/assets/41165cf6-7ce0-42cb-86ba-62ed98b56acb" />
+)
