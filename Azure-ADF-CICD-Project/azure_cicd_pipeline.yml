@@ -1,0 +1,99 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+
+- stage: BuildARMTemplate
+  displayName: "Build ARM Template"
+
+  variables:
+    - group: dev_group
+
+  jobs:
+
+  - job: BuildARM
+    displayName: "Build ARM"
+
+    steps:
+    - template: cicd_build.yml
+      parameters:
+        Datafactory: $(Datafactory)
+        ResourceGroup: $(ResourceGroup)
+        SubscriptionId: $(SubscriptionId)
+        
+
+# DEPLOY TO DEV stage
+- stage: DeployToDEV
+  dependsOn: BuildARMTemplate
+  condition: succeeded()
+  displayName: "Deploy To dev"
+
+  variables:
+  - group: dev_group
+
+  jobs:
+  - job: DeployToDEV
+    displayName: "Deploy To DEV"
+
+    steps:
+    - template: cd_deploy.yml
+      parameters:
+        AzureResourceManagerConnection: adf-azure-service-connection
+        DataFactory: $(DataFactory)
+        SubscriptionId: $(SubscriptionId)
+        ResourceGroup: $(ResourceGroup)
+        Environment: dev
+
+# DEPLOY TO QA stage
+- stage: DeployToQA
+  dependsOn: BuildARMTemplate
+  condition: succeeded()
+  displayName: "Deploy To QA"
+
+  variables:
+  - group: qa_group
+
+  jobs:
+  - job: DeployToQA
+    displayName: "Deploy To QA"
+
+    steps:
+    - template: cd_deploy.yml
+      parameters:
+        AzureResourceManagerConnection: adf-azure-service-connection
+        DataFactory: $(DataFactory)
+        SubscriptionId: $(SubscriptionId)
+        ResourceGroup: $(ResourceGroup)
+        Environment: qa
+
+# DEPLOY TO PD (Production) stage
+- stage: DeployToProd
+  dependsOn: DeployToQA
+  condition: succeeded()
+  displayName: "Deploy To Production"
+
+  variables:
+    - group: prod_group
+
+  jobs:
+    - deployment: DeployToPD
+      displayName: "Deploy To Production"
+
+      environment: 'pd'
+
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - checkout: self
+
+              - template: cd_deploy.yml
+                parameters:
+                  AzureResourceManagerConnection: adf-azure-service-connection
+                  DataFactory: $(DataFactory)
+                  SubscriptionId: $(SubscriptionId)
+                  ResourceGroup: $(ResourceGroup)
+                  Environment: pd
